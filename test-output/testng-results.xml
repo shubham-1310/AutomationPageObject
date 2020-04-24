@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="30106" started-at="2020-04-24T21:35:07 IST" finished-at="2020-04-24T21:35:37 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="30106" started-at="2020-04-24T21:35:07 IST" finished-at="2020-04-24T21:35:37 IST">
+      <class name="com.automation.qa.testcases.LandingPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.automation.qa.testcases.LandingPageTest@1442d7b5]" name="setup" is-config="true" duration-ms="25730" started-at="2020-04-24T21:35:07 IST" finished-at="2020-04-24T21:35:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="landingPageTitleTest()[pri:1, instance:com.automation.qa.testcases.LandingPageTest@1442d7b5]" name="landingPageTitleTest" duration-ms="11" started-at="2020-04-24T21:35:33 IST" finished-at="2020-04-24T21:35:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- landingPageTitleTest -->
+        <test-method status="PASS" signature="siteLogoTest()[pri:2, instance:com.automation.qa.testcases.LandingPageTest@1442d7b5]" name="siteLogoTest" duration-ms="44" started-at="2020-04-24T21:35:33 IST" finished-at="2020-04-24T21:35:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- siteLogoTest -->
+        <test-method status="PASS" signature="loginClick()[pri:3, instance:com.automation.qa.testcases.LandingPageTest@1442d7b5]" name="loginClick" duration-ms="2848" started-at="2020-04-24T21:35:33 IST" finished-at="2020-04-24T21:35:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginClick -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.qa.testcases.LandingPageTest@1442d7b5]" name="tearDown" is-config="true" duration-ms="1439" started-at="2020-04-24T21:35:36 IST" finished-at="2020-04-24T21:35:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.qa.testcases.LandingPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
