@@ -23,7 +23,7 @@ public class LandingPageTest extends Base {
 	}
 	
 	
-	@BeforeClass
+	@BeforeMethod
 	public void setup() throws IOException 
 	{
 		initializeDriver();
@@ -35,7 +35,7 @@ public class LandingPageTest extends Base {
 	@Test(priority=1)
 	public void landingPageTitleTest()
 	{
-		String title = landingPage.ValidateLoginPageTitle();
+		String title = landingPage.ValidateLandingPageTitle();
 		
 		Assert.assertEquals(title, "My Store");
 	}
@@ -53,7 +53,7 @@ public class LandingPageTest extends Base {
 	
 	}
 	
-	@AfterClass
+	@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();

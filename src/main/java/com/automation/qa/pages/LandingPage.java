@@ -35,7 +35,7 @@ public class LandingPage<WebElements> extends Base{
 	}
 	
 	
-	public String ValidateLoginPageTitle()
+	public String ValidateLandingPageTitle()
 	{
 		return driver.getTitle();
 	}
@@ -44,7 +44,7 @@ public class LandingPage<WebElements> extends Base{
 	public LoginPage clickLoginButton()
 	{
 		loginButton.click();
-		return new LoginPage();
+		return new LoginPage(ldriver);
 	}
 	
 	

@@ -22,8 +22,8 @@ public class Base {
 	
 	
 	public static WebDriver driver;
-	public String emailAddress;
-	public String password;
+	public static String emailAddress;
+	public static String password;
 	public static Properties prop;
 	
 	public Base() 
@@ -42,6 +42,9 @@ public class Base {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+	
+		
+				
 		
 	}
 		
@@ -75,12 +78,14 @@ public class Base {
 	        driver =new EdgeDriver();
 	       
 		}
-	 
+	    
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.page_Load_Timeout, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_Wait,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get(prop.getProperty("url"));
+
+		
 			
 		
 		}
