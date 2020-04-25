@@ -30,6 +30,13 @@ WebDriver ldriver;
 	@FindBy(xpath="//li[contains(text(),'Invalid email address.')]")
 	WebElement invalidEmailText;
 	
+	@FindBy(id="email_create")
+	WebElement newUserEmailId;
+	
+	@FindBy(id="SubmitCreate")
+	WebElement createAnAccountButton;
+	
+	
 	
 	
 	
@@ -62,7 +69,17 @@ WebDriver ldriver;
 		return invalidEmailText.isDisplayed();
 	}
 	
+	public void enterNewUserEmailId(String newEmail)
+	{
+		newUserEmailId.sendKeys(newEmail);
+	}
 	
+	public SignUpPage clickCreateAnAccountButton()
+	{
+		createAnAccountButton.click();
+		return new SignUpPage(ldriver);
+	
+	}
 	
 	
 

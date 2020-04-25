@@ -12,13 +12,15 @@ import org.testng.annotations.Test;
 import com.automation.qa.base.Base;
 import com.automation.qa.pages.LandingPage;
 import com.automation.qa.pages.LoginPage;
+import com.automation.qa.pages.SignUpPage;
 
-public class LoginPageNegativeTest extends Base {
+public class SignUpPageTest extends Base {
 	
 	LandingPage landingPage;
 	LoginPage loginPage;
+	SignUpPage signUpPage;
 	
-	public LoginPageNegativeTest()
+	public SignUpPageTest()
 	{
 		super();
 	}
@@ -33,39 +35,26 @@ public class LoginPageNegativeTest extends Base {
 	}
 	
 	@Test(priority=1)
-	public void validateTitle()
-	{
-	String title=loginPage.ValidateLoginPageTitle();
-	Assert.assertEquals(title, "Login - My Store");	
+	public void enterNewEmailAddress() {
+		
+		loginPage.enterNewUserEmailId("shibham.shibu2@gmail.com");
+		signUpPage=loginPage.clickCreateAnAccountButton();
+		
 	}
-	
-	
-	
 	@Test(priority=2)
-	public void enterEmailid()
-	{
-		loginPage.enterEmailId("test");
+	public void validateSignUpPageTitle() {
 		
+		String signUpPageTitle=signUpPage.ValidateSignUpPageTitle();
+		Assert.assertEquals(signUpPageTitle, "Login - My Store");	
 	}
 	
-	@Test  (priority=3)
-	public void enterPassword()
-	{
-		loginPage.enterpwd(password);
+	@Test(priority=3)
+	public void validateSignUpPageHeaderText() {
 		
-	}
-	@Test  (priority=4)
-	public void clickSignButton()
-	{
-		loginPage.clickLoginButton();
-		
+		Assert.assertTrue(signUpPage.validateHeaderText());
 	}
 	
-	@Test (priority=5)
-	public void inValidEmailTextDispalyed() {
-		Assert.assertTrue(loginPage.invalidEmailText());
-	}
-	
+
 	@AfterClass
 	public void tearDown()
 	{
@@ -73,11 +62,7 @@ public class LoginPageNegativeTest extends Base {
 	}
 	
 	
-	
-	
-	
-	
-	
+	}
 	
 
-}
+
