@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import com.automation.qa.base.Base;
 import com.automation.qa.pages.LandingPage;
 import com.automation.qa.pages.LoginPage;
+import com.automation.qa.pages.MyAccountsPage;
 import com.automation.qa.pages.SignUpPage;
 import com.automation.qa.util.TestUtil;
 
@@ -20,6 +21,7 @@ public class SignUpPageTest extends Base {
 	LandingPage landingPage;
 	LoginPage loginPage;
 	SignUpPage signUpPage;
+	MyAccountsPage map;
 	
 	public SignUpPageTest()
 	{
@@ -97,14 +99,68 @@ public class SignUpPageTest extends Base {
 		signUpPage.selectYearOfBirth("1990");
 	}
 	
+	@Test(priority=11)
+	public void enterAddressLine1()
+	{
+		signUpPage.enterAddressL1(TestUtil.randomestring()+ ", "+ TestUtil.randomeNum());
+	}
 	
+	@Test(priority=12)
+	public void enterCityName()
+	{
+		signUpPage.enterCity(TestUtil.randomestring());
+	}
+	
+	@Test(priority=13)
+	public void enterStateName()
+	{
+		signUpPage.selectState("New York");
+	}
+	
+	@Test(priority=14)
+	public void selectCountryName()
+	{
+		signUpPage.selectCountry("United States");
+		
+	}
+	
+	@Test(priority=15)
+	public void enterPostalCode()
+	{
+		signUpPage.enterPostalCode("12345");
+	}
+	
+	@Test(priority=16)
+	public void enterMobileNumber()
+	{
+		signUpPage.enterMobileNum("2341546"+TestUtil.randomeNum());
+	}
+	
+	@Test(priority=17)
+	public void addressReferenceName()
+	{
+		signUpPage.enterAddressReference(TestUtil.randomestring()+TestUtil.randomestring());
+	}
+	
+	@Test(priority=18)
+	public void clickOnRegisterButton()
+	{
+		map=signUpPage.registerButtonClick();
+	}
+	
+	@Test(priority=19)
+	public void testTileOfMyAccountsPage()
+	{
+		String mapTitle=map.ValidateMyAccountsPageTitle();
+		Assert.assertEquals(mapTitle, "My account - My Store");
+	}
 	
 
-//	@AfterClass
-//	public void tearDown()
-//	{
-//		driver.quit();
-//	}
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
 	
 	
 	}

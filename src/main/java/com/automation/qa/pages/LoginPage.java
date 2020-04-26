@@ -56,7 +56,7 @@ WebDriver ldriver;
 	public MyAccountsPage clickLoginButton()
 	{
 		loginButton.click();
-		return new MyAccountsPage();
+		return new MyAccountsPage(ldriver);
 		
 	}
 	
