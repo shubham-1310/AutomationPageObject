@@ -37,10 +37,6 @@ WebDriver ldriver;
 	WebElement createAnAccountButton;
 	
 	
-	
-	
-	
-	
 	public String ValidateLoginPageTitle()
 	{
 		return driver.getTitle();

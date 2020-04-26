@@ -13,6 +13,7 @@ import com.automation.qa.base.Base;
 import com.automation.qa.pages.LandingPage;
 import com.automation.qa.pages.LoginPage;
 import com.automation.qa.pages.SignUpPage;
+import com.automation.qa.util.TestUtil;
 
 public class SignUpPageTest extends Base {
 	
@@ -37,7 +38,7 @@ public class SignUpPageTest extends Base {
 	@Test(priority=1)
 	public void enterNewEmailAddress() {
 		
-		loginPage.enterNewUserEmailId("shibham.shibu2@gmail.com");
+		loginPage.enterNewUserEmailId(TestUtil.randomestring()+TestUtil.randomeNum()+".@gmail.com");
 		signUpPage=loginPage.clickCreateAnAccountButton();
 		
 	}
@@ -54,12 +55,56 @@ public class SignUpPageTest extends Base {
 		Assert.assertTrue(signUpPage.validateHeaderText());
 	}
 	
-
-	@AfterClass
-	public void tearDown()
+	@Test(priority=4)
+	public void customertitleSelectMale()
 	{
-		driver.quit();
+		signUpPage.selectTitleMr();
 	}
+	
+	@Test(priority=5)
+	public void enterCustomerFirstName()
+	{
+		signUpPage.enterCustomerFirstName(TestUtil.randomestring());
+	}
+	
+	@Test(priority=6)
+	public void enterCustomerLastName()
+	{
+		signUpPage.enterCustomerLastName(TestUtil.randomestring());
+	}
+	
+	@Test(priority=7)
+	public void enterCustomerPassword()
+	{
+		signUpPage.enterCustomerPassword(TestUtil.randomeNum()+TestUtil.randomestring());;
+	}
+	
+	@Test(priority=8)
+	public void enterDateOfBirth()
+	{
+		signUpPage.selectDateOfBirth("1");
+	}
+	
+	@Test(priority=9)
+	public void enterMonthOfBirth()
+	{
+		signUpPage.selectMonthOfBirth("1");
+	}
+	
+	@Test(priority=10)
+	public void enterYearOfBirth()
+	{
+		signUpPage.selectYearOfBirth("1990");
+	}
+	
+	
+	
+
+//	@AfterClass
+//	public void tearDown()
+//	{
+//		driver.quit();
+//	}
 	
 	
 	}
