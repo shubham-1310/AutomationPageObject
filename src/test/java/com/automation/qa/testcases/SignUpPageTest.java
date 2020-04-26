@@ -22,6 +22,10 @@ public class SignUpPageTest extends Base {
 	LoginPage loginPage;
 	SignUpPage signUpPage;
 	MyAccountsPage map;
+	String fName;
+    String lName;
+	String fullName;
+	
 	
 	public SignUpPageTest()
 	{
@@ -66,13 +70,15 @@ public class SignUpPageTest extends Base {
 	@Test(priority=5)
 	public void enterCustomerFirstName()
 	{
-		signUpPage.enterCustomerFirstName(TestUtil.randomestring());
+		fName= TestUtil.randomestring();
+		signUpPage.enterCustomerFirstName(fName);
 	}
 	
 	@Test(priority=6)
 	public void enterCustomerLastName()
 	{
-		signUpPage.enterCustomerLastName(TestUtil.randomestring());
+		lName=TestUtil.randomestring();
+		signUpPage.enterCustomerLastName(lName);
 	}
 	
 	@Test(priority=7)
@@ -154,8 +160,16 @@ public class SignUpPageTest extends Base {
 		String mapTitle=map.ValidateMyAccountsPageTitle();
 		Assert.assertEquals(mapTitle, "My account - My Store");
 	}
+	@Test(priority=20)
+	public void validateUserName()
+	{
+		fullName = fName+" "+lName;
+		System.out.println(fullName);
+		Assert.assertEquals( fullName, map.ValidateUserFullName());
+		
+	}
 	
-
+ 
 	@AfterClass
 	public void tearDown()
 	{
