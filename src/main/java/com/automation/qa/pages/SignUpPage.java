@@ -2,6 +2,7 @@ package com.automation.qa.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -23,69 +24,78 @@ public class SignUpPage extends Base {
 	}
 	
 	@FindBy(xpath="//h1[@class='page-heading']")
+	@CacheLookup
 	WebElement signUpPageHeader;
 	
 	@FindBy(xpath="//input[@id='id_gender1']")
+	@CacheLookup
 	WebElement titleMrRadionButton;
 	
 	@FindBy(xpath="//input[@id='id_gender2']")
+	@CacheLookup
 	WebElement titleMrsRadionButton;
 	
 	@FindBy(id="customer_firstname")
+	@CacheLookup
 	WebElement enterCustomerFirstName;
 	
 	@FindBy(id="customer_lastname")
+	@CacheLookup
 	WebElement enterCustomerLastName;
 	
 	@FindBy(id="passwd")
+	@CacheLookup
 	WebElement enterCustomerPassword;
 	
 	@FindBy(id="days")
+	@CacheLookup
 	WebElement dateOfBirth;
 	
 	@FindBy(id="months")
+	@CacheLookup
 	WebElement monthOfBirth;
 	
 	@FindBy(id="years")
+	@CacheLookup
 	WebElement yearOfBirth;
 	
 	@FindBy(id="address1")
+	@CacheLookup
 	WebElement addressL1;
 	
 	@FindBy(id="city")
+	@CacheLookup
 	WebElement city;
 	
 	@FindBy(id="id_state")
+	@CacheLookup
 	WebElement state;
 	
 	@FindBy(id="postcode")
+	@CacheLookup
 	WebElement postalcode;
 	
 	@FindBy(id="id_country")
+	@CacheLookup
 	WebElement country;
 	
 	@FindBy(id="phone_mobile")
+	@CacheLookup
 	WebElement mobileNum;
 	
 	@FindBy(id="alias")
+	@CacheLookup
 	WebElement addressAlias;
 	
 	@FindBy(id="submitAccount")
+	@CacheLookup
 	WebElement registerButton;
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
 	public String ValidateSignUpPageTitle()
 	{
-		return driver.getTitle();
+		return ldriver.getTitle();
 	}
 	
 	public boolean validateHeaderText()

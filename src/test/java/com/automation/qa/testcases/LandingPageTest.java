@@ -23,7 +23,7 @@ public class LandingPageTest extends Base {
 	}
 	
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setup() throws IOException 
 	{
 		initializeDriver();
@@ -53,7 +53,7 @@ public class LandingPageTest extends Base {
 	
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();

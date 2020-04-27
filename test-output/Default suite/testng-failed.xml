@@ -5,8 +5,9 @@
     <classes>
       <class name="com.automation.qa.testcases.SignUpPageTest">
         <methods>
+          <include name="validateSignUpPageHeaderText"/>
           <include name="setup"/>
-          <include name="validateUserName"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.automation.qa.testcases.SignUpPageTest -->
     </classes>

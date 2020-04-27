@@ -24,7 +24,7 @@ public class SignUpPageTest extends Base {
 	MyAccountsPage map;
 	String fName;
     String lName;
-	String fullName;
+	String fullNamee;
 	
 	
 	public SignUpPageTest()
@@ -163,9 +163,9 @@ public class SignUpPageTest extends Base {
 	@Test(priority=20)
 	public void validateUserName()
 	{
-		fullName = fName+" "+lName;
-		System.out.println(fullName);
-		Assert.assertEquals( fullName, map.ValidateUserFullName());
+		fullNamee = fName+" "+lName;
+//		System.out.println(fullNamee);
+		Assert.assertEquals( fullNamee, map.ValidateUserFullName());
 		
 	}
 	

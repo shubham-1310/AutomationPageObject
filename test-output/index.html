@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Shubham Kumar Gupta\AppData\Local\Temp\testng-eclipse--436041939\testng-customsuite.xml</span>
+                    <span>C:\Users\Shubham Kumar Gupta\AppData\Local\Temp\testng-eclipse-823460397\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">20 methods,   20 passed</span>
+                    <span class="method-stats">20 methods, 1 failed,   19 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.automation.qa.testcases.SignUpPageTest" hash-for-method="validateSignUpPageHeaderText">validateSignUpPageHeaderText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -187,11 +201,6 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.automation.qa.testcases.SignUpPageTest" hash-for-method="validateSignUpPageHeaderText">validateSignUpPageHeaderText</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.automation.qa.testcases.SignUpPageTest" hash-for-method="validateSignUpPageTitle">validateSignUpPageTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -212,6 +221,85 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.automation.qa.testcases.SignUpPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSignUpPageHeaderText">
+                  </a> <!-- validateSignUpPageHeaderText -->
+                  <span class="method-name">validateSignUpPageHeaderText</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //h1[@class=&apos;page-heading1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GGN000201150001&apos;, ip: &apos;10.15.16.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Shubham Kumar Gupta\AppData\Local\Temp\rust_mozprofileUWhRoO, rotatable=false, moz:geckodriverVersion=0.26.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=75.0, moz:shutdownTimeout=60000.0, platformVersion=10.0, moz:processID=12056.0, browserName=firefox, moz:buildID=20200403170909, javascriptEnabled=true, platformName=windows, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: cbc5f87b-3dce-4919-87e2-0c9ec99d6fda
+*** Element info: {Using=xpath, value=//h1[@class=&apos;page-heading1&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
+	at com.automation.qa.pages.SignUpPage.validateHeaderText(SignUpPage.java:103)
+	at com.automation.qa.testcases.SignUpPageTest.validateSignUpPageHeaderText(SignUpPageTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -339,13 +427,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateSignUpPageHeaderText">
-                  </a> <!-- validateSignUpPageHeaderText -->
-                  <span class="method-name">validateSignUpPageHeaderText</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="validateSignUpPageTitle">
                   </a> <!-- validateSignUpPageTitle -->
                   <span class="method-name">validateSignUpPageTitle</span>
@@ -363,7 +444,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Shubham Kumar Gupta\AppData\Local\Temp\testng-eclipse--436041939\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Shubham Kumar Gupta\AppData\Local\Temp\testng-eclipse-823460397\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -414,90 +495,90 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(20);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'customertitleSelectMale')
+data.setCell(0, 1, 'validateSignUpPageHeaderText')
 data.setCell(0, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(0, 3, 2052);
+data.setCell(0, 3, 10171);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'clickOnRegisterButton')
 data.setCell(1, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(1, 3, 1788);
+data.setCell(1, 3, 2747);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'enterNewEmailAddress')
 data.setCell(2, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(2, 3, 318);
+data.setCell(2, 3, 330);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'enterDateOfBirth')
 data.setCell(3, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(3, 3, 311);
+data.setCell(3, 3, 322);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'enterStateName')
 data.setCell(4, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(4, 3, 263);
+data.setCell(4, 3, 257);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'enterMonthOfBirth')
 data.setCell(5, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(5, 3, 253);
+data.setCell(5, 3, 250);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'enterYearOfBirth')
 data.setCell(6, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(6, 3, 247);
+data.setCell(6, 3, 246);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'validateSignUpPageHeaderText')
+data.setCell(7, 1, 'customertitleSelectMale')
 data.setCell(7, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(7, 3, 37);
+data.setCell(7, 3, 239);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'selectCountryName')
+data.setCell(8, 1, 'enterCustomerPassword')
 data.setCell(8, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(8, 3, 37);
+data.setCell(8, 3, 41);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'enterCustomerLastName')
+data.setCell(9, 1, 'enterCityName')
 data.setCell(9, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(9, 3, 36);
+data.setCell(9, 3, 38);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'enterMobileNumber')
+data.setCell(10, 1, 'addressReferenceName')
 data.setCell(10, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(10, 3, 32);
+data.setCell(10, 3, 35);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'addressReferenceName')
+data.setCell(11, 1, 'selectCountryName')
 data.setCell(11, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(11, 3, 31);
+data.setCell(11, 3, 35);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'validateUserName')
+data.setCell(12, 1, 'enterCustomerFirstName')
 data.setCell(12, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(12, 3, 28);
+data.setCell(12, 3, 34);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'enterCustomerPassword')
+data.setCell(13, 1, 'enterAddressLine1')
 data.setCell(13, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(13, 3, 28);
+data.setCell(13, 3, 33);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'enterAddressLine1')
+data.setCell(14, 1, 'validateUserName')
 data.setCell(14, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(14, 3, 27);
+data.setCell(14, 3, 30);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'enterCustomerFirstName')
+data.setCell(15, 1, 'enterMobileNumber')
 data.setCell(15, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(15, 3, 26);
+data.setCell(15, 3, 28);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'enterCityName')
+data.setCell(16, 1, 'enterCustomerLastName')
 data.setCell(16, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(16, 3, 25);
+data.setCell(16, 3, 27);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'enterPostalCode')
 data.setCell(17, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(17, 3, 21);
+data.setCell(17, 3, 23);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'validateSignUpPageTitle')
 data.setCell(18, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(18, 3, 6);
+data.setCell(18, 3, 7);
 data.setCell(19, 0, 19)
 data.setCell(19, 1, 'testTileOfMyAccountsPage')
 data.setCell(19, 2, 'com.automation.qa.testcases.SignUpPageTest')
-data.setCell(19, 3, 4);
+data.setCell(19, 3, 6);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -530,87 +611,89 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">enterNewEmailAddress</span>
-                <span class="method-start">25078 ms</span>
+                <span class="method-start">24297 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateSignUpPageTitle</span>
-                <span class="method-start">25399 ms</span>
+                <span class="method-start">24631 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">validateSignUpPageHeaderText</span>
-                <span class="method-start">25406 ms</span>
+                <span class="method-start">24640 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">customertitleSelectMale</span>
-                <span class="method-start">25444 ms</span>
+                <span class="method-start">34814 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterCustomerFirstName</span>
-                <span class="method-start">27498 ms</span>
+                <span class="method-start">35054 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterCustomerLastName</span>
-                <span class="method-start">27526 ms</span>
+                <span class="method-start">35089 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterCustomerPassword</span>
-                <span class="method-start">27564 ms</span>
+                <span class="method-start">35117 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterDateOfBirth</span>
-                <span class="method-start">27593 ms</span>
+                <span class="method-start">35160 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterMonthOfBirth</span>
-                <span class="method-start">27905 ms</span>
+                <span class="method-start">35483 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterYearOfBirth</span>
-                <span class="method-start">28159 ms</span>
+                <span class="method-start">35734 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterAddressLine1</span>
-                <span class="method-start">28407 ms</span>
+                <span class="method-start">35981 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterCityName</span>
-                <span class="method-start">28435 ms</span>
+                <span class="method-start">36015 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterStateName</span>
-                <span class="method-start">28461 ms</span>
+                <span class="method-start">36054 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectCountryName</span>
-                <span class="method-start">28724 ms</span>
+                <span class="method-start">36312 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterPostalCode</span>
-                <span class="method-start">28762 ms</span>
+                <span class="method-start">36348 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterMobileNumber</span>
-                <span class="method-start">28784 ms</span>
+                <span class="method-start">36372 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addressReferenceName</span>
-                <span class="method-start">28816 ms</span>
+                <span class="method-start">36401 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickOnRegisterButton</span>
-                <span class="method-start">28848 ms</span>
+                <span class="method-start">36437 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testTileOfMyAccountsPage</span>
-                <span class="method-start">30637 ms</span>
+                <span class="method-start">39186 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateUserName</span>
-                <span class="method-start">30642 ms</span>
+                <span class="method-start">39194 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">30671 ms</span>
+                <span class="method-start">39225 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

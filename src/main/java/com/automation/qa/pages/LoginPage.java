@@ -2,6 +2,7 @@ package com.automation.qa.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -19,27 +20,32 @@ WebDriver ldriver;
 
 	}
 	@FindBy(id="email")
+	@CacheLookup
 	WebElement emailId;
 	
 	@FindBy(id="passwd")
+	@CacheLookup
 	WebElement pwd;
 	
 	@FindBy(xpath="//p[@class='submit']//span[1]")
+	@CacheLookup
 	WebElement loginButton;
 		
 	@FindBy(xpath="//li[contains(text(),'Invalid email address.')]")
 	WebElement invalidEmailText;
 	
 	@FindBy(id="email_create")
+	@CacheLookup
 	WebElement newUserEmailId;
 	
 	@FindBy(id="SubmitCreate")
+	@CacheLookup
 	WebElement createAnAccountButton;
 	
 	
 	public String ValidateLoginPageTitle()
 	{
-		return driver.getTitle();
+		return ldriver.getTitle();
 	}
 	
 	

@@ -2,6 +2,7 @@ package com.automation.qa.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,6 +25,7 @@ public class MyAccountsPage extends Base{
 	}
 	
 	@FindBy(xpath="/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a/span")
+	@CacheLookup
 	WebElement fullName;
 	
 	
@@ -34,7 +36,7 @@ public class MyAccountsPage extends Base{
 	
 	public String ValidateMyAccountsPageTitle()
 	{
-		return driver.getTitle();
+		return ldriver.getTitle();
 	}
 	
 	public String ValidateUserFullName()

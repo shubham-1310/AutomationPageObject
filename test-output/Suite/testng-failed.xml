@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="SignUpPageTest(failed)">
     <classes>
       <class name="com.automation.qa.testcases.SignUpPageTest">
         <methods>
-          <include name="validateSignUpPageHeaderText"/>
+          <include name="testTileOfMyAccountsPage"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.automation.qa.testcases.SignUpPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- SignUpPageTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
