@@ -36,14 +36,15 @@ public class Base {
 		
 		try 
 		{
+			
+			FileInputStream fiss = new FileInputStream(System.getProperty("user.dir") +"/src/main/java/com/automation/qa/config/config.properties");
+			prop.load(fiss);
 		
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\com\\automation\\qa\\config\\config.properties");
 		prop.load(fis);
 
 		
 			
-			FileInputStream fiss = new FileInputStream(System.getProperty("user.dir") +"/src/main/java/com/automation/qa/config/config.properties");
-			prop.load(fiss);
 
 			}
 		catch (FileNotFoundException e)
