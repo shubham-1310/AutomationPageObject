@@ -21,6 +21,10 @@ public class LandingPage<WebElements> extends Base{
 		PageFactory.initElements(rdriver, this);
 
 	}
+//	public LandingPage() {
+//		PageFactory.initElements(driver, this);	
+//	}
+	
 	
 	@FindBy(xpath="//a[@class='login']")
 	@CacheLookup

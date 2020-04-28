@@ -19,6 +19,11 @@ WebDriver ldriver;
 		PageFactory.initElements(rdriver, this);
 
 	}
+	
+//	public LoginPage() {
+//		PageFactory.initElements(driver, this);	
+//	}
+	
 	@FindBy(id="email")
 	@CacheLookup
 	WebElement emailId;

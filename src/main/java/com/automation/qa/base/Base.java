@@ -34,22 +34,26 @@ public class Base {
 	{
 		prop = new Properties();	
 		
-		try {
+		try 
+		{
 		
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\com\\automation\\qa\\config\\config.properties");
 		prop.load(fis);
 
-		}
-		catch (FileNotFoundException e) {
+		
+			
+			FileInputStream fiss = new FileInputStream(System.getProperty("user.dir") +"/src/main/java/com/automation/qa/config/config.properties");
+			prop.load(fiss);
+
+			}
+		catch (FileNotFoundException e)
+		{
 			e.printStackTrace();
 		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-	
-		
-				
-		
+			
 	}
 		
 		public void initializeDriver() throws IOException

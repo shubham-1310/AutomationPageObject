@@ -22,7 +22,10 @@ public class SignUpPage extends Base {
 		PageFactory.initElements(rdriver, this);
 
 	}
-	
+//	public SignUpPage() {
+//		PageFactory.initElements(driver, this);	
+//	}
+//	
 	@FindBy(xpath="//h1[@class='page-heading']")
 	@CacheLookup
 	WebElement signUpPageHeader;

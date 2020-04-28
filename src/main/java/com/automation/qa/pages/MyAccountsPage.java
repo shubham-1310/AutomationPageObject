@@ -11,7 +11,6 @@ import com.automation.qa.base.Base;
 public class MyAccountsPage extends Base{
 	
 	
-
 	WebDriver ldriver;
 	
 	
@@ -24,9 +23,17 @@ public class MyAccountsPage extends Base{
 
 	}
 	
+//	public MyAccountsPage() {
+//		PageFactory.initElements(driver, this);	
+//	}
+	
 	@FindBy(xpath="/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a/span")
 	@CacheLookup
 	WebElement fullName;
+	
+	@FindBy(xpath="//span[contains(text(),'Home')]	")
+	@CacheLookup
+	WebElement bottomHomeButton;
 	
 	
 	
@@ -36,12 +43,18 @@ public class MyAccountsPage extends Base{
 	
 	public String ValidateMyAccountsPageTitle()
 	{
-		return ldriver.getTitle();
+		return driver.getTitle();
 	}
 	
 	public String ValidateUserFullName()
 	{
 		return fullName.getText();
+	}
+	
+	public HomePage clickBottomHomeButton()
+	{
+		bottomHomeButton.click();
+		return new HomePage();
 	}
 	
 	

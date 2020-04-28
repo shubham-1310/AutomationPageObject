@@ -25,6 +25,12 @@
       <class name="com.automation.qa.testcases.SignUpPageTest"/>
     </classes>
   </test> <!-- Test -->
+    
+    <test thread-count="5" name="HomePageTest">
+    <classes>
+      <class name="com.automation.qa.testcases.HomePageTest"/>
+    </classes>
+  </test> <!-- Test -->
   
   
   
