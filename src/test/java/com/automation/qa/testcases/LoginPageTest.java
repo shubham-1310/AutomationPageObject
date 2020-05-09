@@ -36,7 +36,7 @@ public class LoginPageTest extends Base {
 	public void validateTitle()
 	{
 	String title=loginPage.ValidateLoginPageTitle();
-	Assert.assertEquals(title, "Login - My Store");	
+	Assert.assertEquals(title, "Login - My Storee");	
 	}
 	
 	
