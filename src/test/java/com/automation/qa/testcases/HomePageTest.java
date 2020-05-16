@@ -57,13 +57,15 @@ public class HomePageTest extends Base {
 	
 	
 	@Test(priority=2)
-	public void validateContatNumber()
+	public void validateContatNumber() throws InterruptedException
 	{
 		Assert.assertEquals(homePage.validateContactNumber(), "0123-456-789");
 		
+		Thread.sleep(5000);
+		
 	}
 	
-	@Test(priority=3, enabled =false)
+	@Test(priority=3, enabled=false)
 	public void validateBrokenLinksTest() throws InterruptedException
 	{
 		 List links=homePage.linksOnHomePage();
@@ -97,9 +99,9 @@ public class HomePageTest extends Base {
 	            	                if(respCode >= 400){
 	            	                    System.out.println(url+" is a broken link");
 	            	                }
-//	            	                else{
-//	            	                    System.out.println(url+" is a valid link");
-//	            	                }
+	            	                else{
+	            	                    System.out.println(url+" is a valid link");
+	            	                }
 	            	                    
 	            	            } catch (MalformedURLException e) {
 	            	                // TODO Auto-generated catch block
@@ -108,10 +110,11 @@ public class HomePageTest extends Base {
 	            	                // TODO Auto-generated catch block
 	            	                e.printStackTrace();
 	            	            }
-	            	        }
-	            	        
+	            	        }        	        
 	}
 		 
+	
+
 	
 	
 	@AfterClass

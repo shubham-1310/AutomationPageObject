@@ -3,8 +3,10 @@ package com.automation.qa.pages;
 
 import java.util.List;
 
-
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,19 +15,19 @@ import com.automation.qa.base.Base;
 
 public class HomePage<WebElements> extends Base{
 	
-//	WebDriver ldriver;
-//	
-//	public HomePage(WebDriver rdriver)
-//	//here l for local and r for remote
-//	{
-//		ldriver=rdriver;
-//		PageFactory.initElements(rdriver, this);
-//
-//	}
+	WebDriver ldriver;
 	
-	public HomePage() {
-		PageFactory.initElements(driver, this);	
+	public HomePage(WebDriver rdriver)
+	//here l for local and r for remote
+	{
+		ldriver=rdriver;
+		PageFactory.initElements(rdriver, this);
+
 	}
+	
+//	public HomePage() {
+//		PageFactory.initElements(driver, this);	
+//	}
 	
 	@FindBy(xpath="//img[@class='logo img-responsive']")
 	@CacheLookup
@@ -38,6 +40,8 @@ public class HomePage<WebElements> extends Base{
 	@FindBy(xpath="//a")
 	@CacheLookup
 	List<WebElement>linksOnHomePage;
+	
+
 	
 	
 
@@ -54,9 +58,12 @@ public class HomePage<WebElements> extends Base{
 	}
 	
 	public List<WebElement> linksOnHomePage() {
-		return linksOnHomePage;
-		
+		return linksOnHomePage;		
 	}
+	
+
+	
+	
 	
 	
 	

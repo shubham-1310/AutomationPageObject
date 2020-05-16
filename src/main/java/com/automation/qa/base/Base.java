@@ -66,6 +66,10 @@ public class Base {
 
 			WebDriverManager.chromedriver().setup();
 	        driver =new ChromeDriver();
+		
+//				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Driver\\chromedriver.exe");
+//				driver=new ChromeDriver();
+//		
 	      
 		}
 		else if (browserName.equals("firefox"))

@@ -54,7 +54,7 @@ public class MyAccountsPage extends Base{
 	public HomePage clickBottomHomeButton()
 	{
 		bottomHomeButton.click();
-		return new HomePage();
+		return new HomePage(ldriver);
 	}
 	
 	

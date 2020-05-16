@@ -2,6 +2,9 @@ package com.automation.qa.testcases;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -47,11 +50,22 @@ public class LandingPageTest extends Base {
 		
 	}
 	
-	@Test(priority=3)
+
+	
+	@Test(priority=3 )
 	public void loginClick() {
 	loginPage=landingPage.clickLoginButton();
 	
 	}
+	
+//	@Test(priority=4)
+//	public void moveToWomenTshirtSection() throws InterruptedException
+//	{
+//		Thread.sleep(3000);
+//		landingPage.moveToWomenSection();
+//		Thread.sleep(3000);
+//		landingPage.clickOnWomenTshirt();
+//	}
 	
 	@AfterClass
 	public void tearDown()
