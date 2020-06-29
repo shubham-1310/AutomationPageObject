@@ -4,27 +4,15 @@
   <listeners>
     <listener class-name="com.automation.qa.extentReportListener.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SignUpPageTest(failed)">
+  <test thread-count="5" name="LoginPageTest(failed)">
     <classes>
-      <class name="com.automation.qa.testcases.SignUpPageTest">
+      <class name="com.automation.qa.testcases.LoginPageTest">
         <methods>
-          <include name="testTileOfMyAccountsPage"/>
           <include name="setup"/>
-          <include name="validateUserName"/>
+          <include name="validateTitle"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.automation.qa.testcases.SignUpPageTest -->
+      </class> <!-- com.automation.qa.testcases.LoginPageTest -->
     </classes>
-  </test> <!-- SignUpPageTest(failed) -->
-  <test thread-count="5" name="HomePageTest(failed)">
-    <classes>
-      <class name="com.automation.qa.testcases.HomePageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="validateBrokenLinksTest"/>
-        </methods>
-      </class> <!-- com.automation.qa.testcases.HomePageTest -->
-    </classes>
-  </test> <!-- HomePageTest(failed) -->
+  </test> <!-- LoginPageTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
